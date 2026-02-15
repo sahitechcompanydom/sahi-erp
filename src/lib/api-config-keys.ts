@@ -1,0 +1,11 @@
+/** Standard key names for system connectivity (system_settings columns / getSystemKey). */
+
+export const API_CONFIG_KEYS = {
+  NEXT_PUBLIC_SUPABASE_URL: "NEXT_PUBLIC_SUPABASE_URL",
+  NEXT_PUBLIC_SUPABASE_ANON_KEY: "NEXT_PUBLIC_SUPABASE_ANON_KEY",
+  SUPABASE_SERVICE_ROLE_KEY: "SUPABASE_SERVICE_ROLE_KEY",
+  WHATSAPP_INSTANCE_ID: "WHATSAPP_INSTANCE_ID",
+  WHATSAPP_TOKEN: "WHATSAPP_TOKEN",
+  /** Backend alias for WHATSAPP_TOKEN (same column) */
+  ULTRAMSG_TOKEN: "ULTRAMSG_TOKEN",
+} as const;
