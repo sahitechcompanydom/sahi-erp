@@ -105,12 +105,12 @@ export function TaskTrackerView() {
   return (
     <div className="p-8 pl-[calc(16rem+2rem)]">
       <div className="mx-auto max-w-[1600px] space-y-6">
-        <header className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
-          <div>
+        <header className="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
+          <div className="min-w-0 flex-1">
             <h1 className="text-2xl font-semibold tracking-tight text-foreground">
               Task Tracker
             </h1>
-            <p className="mt-1 text-sm text-muted-foreground">
+            <p className="mt-1 min-h-[2.5rem] text-sm text-muted-foreground">
               {viewMode === "management"
                 ? "Grouped by status. Resolved section shows Wiki conversion; green icon = documented."
                 : viewMode === "list"
@@ -118,9 +118,9 @@ export function TaskTrackerView() {
                   : "Drag cards between columns to update status. Staff cannot set Completed — use Review Pending."}
             </p>
           </div>
-          <div className="flex items-center gap-3">
+          <div className="flex shrink-0 items-center gap-3">
             <Tabs value={viewMode} onValueChange={(v) => setViewMode(v as "list" | "kanban" | "management")}>
-              <TabsList className="grid w-full grid-cols-3">
+              <TabsList className="grid w-[280px] grid-cols-3">
                 <TabsTrigger value="list" className="gap-2">
                   <LayoutList className="h-4 w-4" />
                   List
